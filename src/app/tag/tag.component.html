@@ -1,0 +1,12 @@
+<div *ngIf="tags">
+  <a *ngFor="let tag of tags" routerLink="/tags/{{tag.name}}"> 
+    <!-- why routerlink here means to make every tag.name and tag.count as clickable to their specific pages -->
+    {{tag.name}}  ({{tag.count}}) 
+  </a>
+</div>
+<div *ngIf="foodtag">
+  <a *ngFor="let tagName of foodtag" routerLink="/tags/{{tagName}}"> 
+    <!-- why routerlink here means to make every tagName as clickable to their specific pages -->
+    {{tagName}} 
+  </a>
+</div>
